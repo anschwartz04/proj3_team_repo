@@ -10,7 +10,7 @@ $conn = mysqli_connect($server, $username, $password, $database);
     $result = mysqli_query($conn, $sql);
     $datas = array();
     if(mysqli_num_rows($result) >0){
-        while($row = myqli_fetch_assoc($result)){
+        while($row = mysqli_fetch_assoc($result)){
             $datas[] = $row;
         }
     }
